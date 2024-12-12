@@ -26,3 +26,14 @@ begin
   TTF_CloseFont(Font);
   TTF_Quit;
 end.
+
+
+
+var
+  Text: String;
+  TextPChar: PChar;
+begin
+  Text := 'Score: 10';
+  TextPChar := PChar(Text); // Conversion explicite
+  Surface := TTF_RenderText_Blended(Font, TextPChar, Color);
+end;
